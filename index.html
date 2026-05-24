@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saleem Afandi Hotel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- Reading Progress Bar -->
+<div id="progress-bar"></div>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+  <a class="mob-link" href="#hero"     onclick="closeMob()" data-i18n="nav.home">Home</a>
+  <a class="mob-link" href="#rooms"    onclick="closeMob()" data-i18n="nav.rooms">Rooms</a>
+  <a class="mob-link" href="#about"    onclick="closeMob()" data-i18n="nav.about">About</a>
+  <a class="mob-link" href="#services" onclick="closeMob()" data-i18n="nav.services">Services</a>
+  <a class="mob-link" href="#gallery"  onclick="closeMob()" data-i18n="nav.gallery">Gallery</a>
+  <a class="mob-link" href="#contact"  onclick="closeMob()" data-i18n="nav.contact">Contact</a>
+  <div class="mob-lang">
+    <div class="mob-lang-opt active" id="mlEn" onclick="setLang('en')">English</div>
+    <div class="mob-lang-opt"        id="mlAr" onclick="setLang('ar')">العربية</div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header id="navbar">
+  <div class="nav-brand">
+    <span class="nav-brand-main" data-i18n="brand.main">Saleem Afandi</span>
+    <span class="nav-brand-sub"  data-i18n="brand.sub">Luxury Hotel</span>
+  </div>
+  <ul class="nav-links">
+    <li><a class="nav-link" href="#hero"     data-i18n="nav.home">Home</a></li>
+    <li><a class="nav-link" href="#rooms"    data-i18n="nav.rooms">Rooms</a></li>
+    <li><a class="nav-link" href="#about"    data-i18n="nav.about">About</a></li>
+    <li><a class="nav-link" href="#services" data-i18n="nav.services">Services</a></li>
+    <li><a class="nav-link" href="#gallery"  data-i18n="nav.gallery">Gallery</a></li>
+    <li><a class="nav-link" href="#contact"  data-i18n="nav.contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-wrap" id="langWrap">
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">
+        🌐 <span id="langBtnTxt">Language</span>
+        <span class="lang-arrow" id="langArrow">▾</span>
+      </button>
+      <div class="lang-drop" id="langDrop">
+        <div class="lang-opt active" id="optEn" onclick="setLang('en')"><span>🇺🇸</span><span class="lname">English</span></div>
+        <div class="lang-opt"        id="optAr" onclick="setLang('ar')"><span>🇵🇸</span><span class="lname-ar">العربية</span></div>
+      </div>
+    </div>
+    <button id="darkBtn" onclick="toggleDark()" title="Toggle dark mode">🌙</button>
+    <a href="#contact" class="btn btn-gold" style="font-size:.6rem;padding:.55em 1.2em" data-i18n="nav.cta">Contact Us</a>
+    <button class="hamburger" id="hamBtn" onclick="toggleMob()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-inner">
+    <div class="hero-badge" data-i18n="hero.badge">Nablus · Palestine · Est. 2013</div>
+    <h1 class="hero-title" data-i18n-h="hero.title">Welcome to<br><em>Saleem Afandi</em><br>Hotel</h1>
+    <p class="hero-sub" data-i18n="hero.sub">Comfort, elegance, and a perfect stay</p>
+    <div class="hero-btns">
+      <a href="#rooms"   class="btn btn-gold"    data-i18n="hero.btn1">View Rooms</a>
+      <a href="#contact" class="btn btn-outline"  data-i18n="hero.btn2">Contact Us</a>
+    </div>
+  </div>
+  <div class="hero-scroll" data-i18n="hero.scroll">Scroll</div>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stat reveal">   <div class="stat-num">30+</div><div class="stat-lbl" data-i18n="stats.rooms">Luxury Rooms</div></div>
+  <div class="stat reveal d1"><div class="stat-num">12</div> <div class="stat-lbl" data-i18n="stats.years">Years of Excellence</div></div>
+  <div class="stat reveal d2"><div class="stat-num">10k+</div><div class="stat-lbl" data-i18n="stats.guests">Happy Guests</div></div>
+  <div class="stat reveal d3"><div class="stat-num">5★</div> <div class="stat-lbl" data-i18n="stats.rating">Guest Rating</div></div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <img src="https://i.ibb.co/RMGzWsL/lobby1.png" alt="Hotel Lobby" loading="lazy"/>
+        <div class="about-badge2">
+          <div class="about-badge2-num">12+</div>
+          <div class="about-badge2-txt" data-i18n="about.badge">Years of Luxury</div>
+        </div>
+      </div>
+      <div class="about-text reveal d2">
+        <p class="section-sub" data-i18n="about.sub">Our Story</p>
+        <h2 class="section-title" data-i18n-h="about.title">A Heritage of <span>Refined Hospitality</span></h2>
+        <span class="gold-line"></span>
+        <p data-i18n="about.p1">Saleem Afandi Hotel is a distinguished landmark of hospitality in the heart of Nablus, Palestine. We offer our guests a unique blend of authentic warmth and modern comfort, creating an atmosphere where every detail is carefully considered.</p>
+        <p data-i18n="about.p2">From our elegantly appointed rooms to our welcoming coffee shop and cozy seating areas, we are dedicated to providing a relaxing and memorable experience for every guest — whether for business, leisure, or family stays.</p>
+        <div class="about-feats">
+          <div class="about-feat"><div class="af-icon">✦</div><div class="af-txt" data-i18n="about.f1">Prime city-centre location</div></div>
+          <div class="about-feat"><div class="af-icon">✦</div><div class="af-txt" data-i18n="about.f2">Coffee Shop & Café on-site</div></div>
+          <div class="about-feat"><div class="af-icon">✦</div><div class="af-txt" data-i18n="about.f3">Free high-speed Wi-Fi</div></div>
+          <div class="about-feat"><div class="af-icon">✦</div><div class="af-txt" data-i18n="about.f4">24-hour reception service</div></div>
+        </div>
+        <br>
+        <a href="#rooms" class="btn btn-outline-dark" data-i18n="about.btn">Explore Our Rooms</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROOMS -->
+<section id="rooms">
+  <div class="container">
+    <div class="rooms-head reveal">
+      <p class="section-sub" data-i18n="rooms.sub">Accommodation</p>
+      <h2 class="section-title" data-i18n-h="rooms.title">Our <span>Rooms & Suites</span></h2>
+      <span class="gold-line center"></span>
+      <p style="font-size:.82rem;color:var(--muted);max-width:480px;margin:0 auto;line-height:1.8" data-i18n="rooms.desc">Select a room type below to explore photos and details.</p>
+    </div>
+
+    <div class="room-tabs">
+      <button class="rtab active" onclick="switchRoom('r-double',this)"  data-i18n="rooms.tab.double">Large Double Room</button>
+      <button class="rtab"        onclick="switchRoom('r-suite',this)"   data-i18n="rooms.tab.suite">Romeo &amp; Juliette Suite</button>
+      <button class="rtab"        onclick="switchRoom('r-deluxe',this)"  data-i18n="rooms.tab.deluxe">Deluxe Junior Suite</button>
+      <button class="rtab"        onclick="switchRoom('r-triple',this)"  data-i18n="rooms.tab.triple">Deluxe Triple Room</button>
+      <button class="rtab"        onclick="switchRoom('r-vip',this)"     data-i18n="rooms.tab.vip">VIP Suite with Sauna</button>
+    </div>
+
+    <!-- LARGE DOUBLE ROOM -->
+    <div class="room-panel active" id="r-double">
+      <div class="room-showcase">
+        <div>
+          <div class="room-gallery">
+            <div class="rgal-stage" id="stage-double" onclick="openLb(rmImgs.double,rIdx.double)">
+              <div class="rgal-zoom-ico">⤢ View</div>
+              <div class="rgal-grad-l"></div><div class="rgal-grad-r"></div>
+              <div class="rgal-counter"><span id="cnt-double">1</span> / 6</div>
+              <div class="rgal-dots" id="dots-double"></div>
+              <button class="rgal-prev" onclick="event.stopPropagation();rmNav('double',-1)">&#8249;</button>
+              <button class="rgal-next" onclick="event.stopPropagation();rmNav('double',1)">&#8250;</button>
+            </div>
+            <div class="rgal-strip" id="strip-double"></div>
+          </div>
+        </div>
+        <div class="room-info">
+          <span class="room-tag-badge" data-i18n="rooms.tab.double">Large Double Room</span>
+          <h3 class="room-name" data-i18n="rooms.double.name">Large Double Room</h3>
+          <div class="room-name-ar" data-i18n="rooms.double.name_ar">غرفة مزدوجة كبيرة</div>
+          <p class="room-desc" data-i18n="rooms.double.desc">A spacious and elegantly furnished double room designed for comfort and relaxation. Perfect for couples or guests seeking extra space, with warm décor and all modern amenities.</p>
+          <div class="room-feats">
+            <span class="rf" data-i18n="rf.king">King Bed</span>
+            <span class="rf" data-i18n="rf.wifi">Free Wi-Fi</span>
+            <span class="rf" data-i18n="rf.ac">Air Conditioning</span>
+            <span class="rf" data-i18n="rf.bath">Private Bathroom</span>
+            <span class="rf" data-i18n="rf.tv">Smart TV</span>
+            <span class="rf" data-i18n="rf.2pax">2 Persons</span>
+          </div>
+          <div class="room-divider"></div>
+          <a href="#contact" class="btn btn-outline-dark" style="font-size:.62rem" data-i18n="rooms.enquire">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROMEO & JULIETTE SUITE -->
+    <div class="room-panel" id="r-suite">
+      <div class="room-showcase">
+        <div>
+          <div class="room-gallery">
+            <div class="rgal-stage" id="stage-suite" onclick="openLb(rmImgs.suite,rIdx.suite)">
+              <div class="rgal-zoom-ico">⤢ View</div>
+              <div class="rgal-grad-l"></div><div class="rgal-grad-r"></div>
+              <div class="rgal-counter"><span id="cnt-suite">1</span> / 5</div>
+              <div class="rgal-dots" id="dots-suite"></div>
+              <button class="rgal-prev" onclick="event.stopPropagation();rmNav('suite',-1)">&#8249;</button>
+              <button class="rgal-next" onclick="event.stopPropagation();rmNav('suite',1)">&#8250;</button>
+            </div>
+            <div class="rgal-strip" id="strip-suite"></div>
+          </div>
+        </div>
+        <div class="room-info">
+          <span class="room-tag-badge" data-i18n="rooms.tab.suite">VIP Suite</span>
+          <h3 class="room-name" data-i18n="rooms.suite.name">Romeo &amp; Juliette Suite</h3>
+          <div class="room-name-ar" data-i18n="rooms.suite.name_ar">جناح روميو وجولييت</div>
+          <p class="room-desc" data-i18n="rooms.suite.desc">Our most romantic VIP suite — a breathtaking blend of passion and luxury. Designed for unforgettable moments, with stunning décor, a plush king bed, and exclusive amenities.</p>
+          <div class="room-feats">
+            <span class="rf" data-i18n="rf.king">King Bed</span>
+            <span class="rf" data-i18n="rf.vip">VIP Suite</span>
+            <span class="rf" data-i18n="rf.wifi">Free Wi-Fi</span>
+            <span class="rf" data-i18n="rf.ac">Air Conditioning</span>
+            <span class="rf" data-i18n="rf.bath">Private Bathroom</span>
+            <span class="rf" data-i18n="rf.tv">Smart TV</span>
+            <span class="rf" data-i18n="rf.2pax">2 Persons</span>
+          </div>
+          <div class="room-divider"></div>
+          <a href="#contact" class="btn btn-outline-dark" style="font-size:.62rem" data-i18n="rooms.enquire">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- DELUXE JUNIOR SUITE -->
+    <div class="room-panel" id="r-deluxe">
+      <div class="room-showcase">
+        <div>
+          <div class="room-gallery">
+            <div class="rgal-stage" id="stage-deluxe" onclick="openLb(rmImgs.deluxe,rIdx.deluxe)">
+              <div class="rgal-zoom-ico">⤢ View</div>
+              <div class="rgal-grad-l"></div><div class="rgal-grad-r"></div>
+              <div class="rgal-counter"><span id="cnt-deluxe">1</span> / 4</div>
+              <div class="rgal-dots" id="dots-deluxe"></div>
+              <button class="rgal-prev" onclick="event.stopPropagation();rmNav('deluxe',-1)">&#8249;</button>
+              <button class="rgal-next" onclick="event.stopPropagation();rmNav('deluxe',1)">&#8250;</button>
+            </div>
+            <div class="rgal-strip" id="strip-deluxe"></div>
+          </div>
+        </div>
+        <div class="room-info">
+          <span class="room-tag-badge" data-i18n="rooms.tab.deluxe">Deluxe Suite</span>
+          <h3 class="room-name" data-i18n="rooms.deluxe.name">Deluxe Junior Suite</h3>
+          <div class="room-name-ar" data-i18n="rooms.deluxe.name_ar">سويت عائلي - ديلوكس جونيور</div>
+          <p class="room-desc" data-i18n="rooms.deluxe.desc">A beautifully appointed family suite combining elegance with generous space. Ideal for families or small groups, featuring premium furnishings and a warm, welcoming atmosphere.</p>
+          <div class="room-feats">
+            <span class="rf" data-i18n="rf.family">Family Suite</span>
+            <span class="rf" data-i18n="rf.wifi">Free Wi-Fi</span>
+            <span class="rf" data-i18n="rf.ac">Air Conditioning</span>
+            <span class="rf" data-i18n="rf.bath">Private Bathroom</span>
+            <span class="rf" data-i18n="rf.tv">Smart TV</span>
+            <span class="rf" data-i18n="rf.4pax">Up to 4 Persons</span>
+          </div>
+          <div class="room-divider"></div>
+          <a href="#contact" class="btn btn-outline-dark" style="font-size:.62rem" data-i18n="rooms.enquire">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- DELUXE TRIPLE ROOM -->
+    <div class="room-panel" id="r-triple">
+      <div class="room-showcase">
+        <div>
+          <div class="room-gallery">
+            <div class="rgal-stage" id="stage-triple" onclick="openLb(rmImgs.triple,rIdx.triple)">
+              <div class="rgal-zoom-ico">⤢ View</div>
+              <div class="rgal-grad-l"></div><div class="rgal-grad-r"></div>
+              <div class="rgal-counter"><span id="cnt-triple">1</span> / 4</div>
+              <div class="rgal-dots" id="dots-triple"></div>
+              <button class="rgal-prev" onclick="event.stopPropagation();rmNav('triple',-1)">&#8249;</button>
+              <button class="rgal-next" onclick="event.stopPropagation();rmNav('triple',1)">&#8250;</button>
+            </div>
+            <div class="rgal-strip" id="strip-triple"></div>
+          </div>
+        </div>
+        <div class="room-info">
+          <span class="room-tag-badge" data-i18n="rooms.tab.triple">Triple Room</span>
+          <h3 class="room-name" data-i18n="rooms.triple.name">Deluxe Triple Room</h3>
+          <div class="room-name-ar" data-i18n="rooms.triple.name_ar">غرفة ثلاثية ديلوكس</div>
+          <p class="room-desc" data-i18n="rooms.triple.desc">A stylish triple room perfect for families or groups of three. Featuring three comfortable beds, elegant décor, and all the amenities needed for a comfortable stay.</p>
+          <div class="room-feats">
+            <span class="rf" data-i18n="rf.3beds">3 Beds</span>
+            <span class="rf" data-i18n="rf.wifi">Free Wi-Fi</span>
+            <span class="rf" data-i18n="rf.ac">Air Conditioning</span>
+            <span class="rf" data-i18n="rf.bath">Private Bathroom</span>
+            <span class="rf" data-i18n="rf.tv">Smart TV</span>
+            <span class="rf" data-i18n="rf.3pax">3 Persons</span>
+          </div>
+          <div class="room-divider"></div>
+          <a href="#contact" class="btn btn-outline-dark" style="font-size:.62rem" data-i18n="rooms.enquire">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIP SUITE WITH SAUNA -->
+    <div class="room-panel" id="r-vip">
+      <div class="room-showcase">
+        <div>
+          <div class="room-gallery">
+            <div class="rgal-stage" id="stage-vip" onclick="openLb(rmImgs.vip,rIdx.vip)">
+              <div class="rgal-zoom-ico">⤢ View</div>
+              <div class="rgal-grad-l"></div><div class="rgal-grad-r"></div>
+              <div class="rgal-counter"><span id="cnt-vip">1</span> / 7</div>
+              <div class="rgal-dots" id="dots-vip"></div>
+              <button class="rgal-prev" onclick="event.stopPropagation();rmNav('vip',-1)">&#8249;</button>
+              <button class="rgal-next" onclick="event.stopPropagation();rmNav('vip',1)">&#8250;</button>
+            </div>
+            <div class="rgal-strip" id="strip-vip"></div>
+          </div>
+        </div>
+        <div class="room-info">
+          <span class="room-tag-badge" data-i18n="rooms.tab.vip">VIP Family Suite</span>
+          <h3 class="room-name" data-i18n="rooms.vip.name">Deluxe Family Suite with Sauna</h3>
+          <div class="room-name-ar" data-i18n="rooms.vip.name_ar">سويت عائلي فاخر مع ساونا — 6 أشخاص</div>
+          <p class="room-desc" data-i18n="rooms.vip.desc">The ultimate family luxury experience. Accommodates up to 6 guests with a private sauna, premium furnishings, spacious living areas, and everything for an indulgent stay.</p>
+          <div class="room-feats">
+            <span class="rf" data-i18n="rf.sauna">Private Sauna</span>
+            <span class="rf" data-i18n="rf.6pax">Up to 6 Persons</span>
+            <span class="rf" data-i18n="rf.wifi">Free Wi-Fi</span>
+            <span class="rf" data-i18n="rf.ac">Air Conditioning</span>
+            <span class="rf" data-i18n="rf.bath">Private Bathroom</span>
+            <span class="rf" data-i18n="rf.tv">Smart TV</span>
+            <span class="rf" data-i18n="rf.living">Living Area</span>
+          </div>
+          <div class="room-divider"></div>
+          <a href="#contact" class="btn btn-outline-dark" style="font-size:.62rem" data-i18n="rooms.enquire">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="svc-head reveal">
+      <p class="section-sub" data-i18n="svc.sub">What We Offer</p>
+      <h2 class="section-title" data-i18n-h="svc.title">Hotel <span style="color:var(--gold-l)">Services</span></h2>
+      <span class="gold-line center"></span>
+      <p style="font-size:.8rem;color:rgba(255,255,255,.42);max-width:480px;margin:0 auto;line-height:1.8" data-i18n="svc.desc">Every service is delivered with genuine care and meticulous attention to your comfort.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card reveal">   <span class="svc-icon">📶</span><div class="svc-name" data-i18n="svc.s1.name">Free Wi-Fi</div>                  <div class="svc-desc" data-i18n="svc.s1.desc">High-speed complimentary internet available throughout all hotel areas.</div></div>
+      <div class="svc-card reveal d1"><span class="svc-icon">🛎️</span><div class="svc-name" data-i18n="svc.s2.name">24/7 Reception</div>             <div class="svc-desc" data-i18n="svc.s2.desc">Our friendly front desk team is available around the clock to assist you.</div></div>
+      <div class="svc-card reveal d2"><span class="svc-icon">☕</span> <div class="svc-name" data-i18n="svc.s3.name">Coffee Shop / Café</div>          <div class="svc-desc" data-i18n="svc.s3.desc">Enjoy freshly brewed coffee, hot drinks, and light bites in our welcoming café.</div></div>
+      <div class="svc-card reveal d3"><span class="svc-icon">✨</span> <div class="svc-name" data-i18n="svc.s4.name">Cleaning Service</div>            <div class="svc-desc" data-i18n="svc.s4.desc">Daily professional housekeeping with fresh linens and premium toiletries.</div></div>
+      <div class="svc-card reveal">   <span class="svc-icon">🛋️</span><div class="svc-name" data-i18n="svc.s5.name">Comfortable Seating Areas</div>  <div class="svc-desc" data-i18n="svc.s5.desc">Relaxing common lounges and seating areas for guests to unwind.</div></div>
+      <div class="svc-card reveal d1"><span class="svc-icon">📍</span> <div class="svc-name" data-i18n="svc.s6.name">Google Maps</div>                 <div class="svc-desc" data-i18n="svc.s6.desc">Find us easily — tap Google Maps in our Contact section.</div></div>
+      <div class="svc-card reveal d2"><span class="svc-icon">🚗</span> <div class="svc-name" data-i18n="svc.s7.name">Waze Navigation</div>             <div class="svc-desc" data-i18n="svc.s7.desc">Navigate directly to the hotel using Waze with one tap.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="gallery-head reveal container">
+    <p class="section-sub" data-i18n="gal.sub">Visual Journey</p>
+    <h2 class="section-title" data-i18n-h="gal.title">Photo <span>Gallery</span></h2>
+    <span class="gold-line center"></span>
+  </div>
+  <div class="container">
+    <div class="gal-tabs">
+      <button class="gtab active" onclick="switchGal('g-lobby',this)" data-i18n="gal.tab.lobby">Hotel Lobby</button>
+      <button class="gtab"        onclick="switchGal('g-cafe',this)"  data-i18n="gal.tab.cafe">Coffee Shop</button>
+      <button class="gtab"        onclick="switchGal('g-rooms',this)" data-i18n="gal.tab.rooms">Rooms</button>
+    </div>
+
+    <div class="gal-panel active" id="g-lobby">
+      <div class="gal-grid">
+        <div class="gi reveal"    onclick="openLb(lobbyImgs,0)"><img src="https://i.ibb.co/1tLz7G3K/w1.png"      loading="lazy" alt="Hotel Lobby"/><div class="gi-ov"><span class="gi-lbl" data-i18n="gal.l.lobby1">Hotel Lobby</span></div></div>
+        <div class="gi reveal d1" onclick="openLb(lobbyImgs,1)"><img src="https://i.ibb.co/RMGzWsL/lobby1.png"   loading="lazy" alt="Grand Entrance"/><div class="gi-ov"><span class="gi-lbl" data-i18n="gal.l.lobby2">Grand Entrance</span></div></div>
+        <div class="gi reveal d2" onclick="openLb(lobbyImgs,2)"><img src="https://i.ibb.co/67yXg9KJ/lobby2.png"  loading="lazy" alt="Reception Area"/><div class="gi-ov"><span class="gi-lbl" data-i18n="gal.l.lobby3">Reception Area</span></div></div>
+        <div class="gi reveal d3" onclick="openLb(lobbyImgs,3)"><img src="https://i.ibb.co/hRp1BSp9/lobby3.png"  loading="lazy" alt="Hotel Interior"/><div class="gi-ov"><span class="gi-lbl" data-i18n="gal.l.lobby4">Hotel Interior</span></div></div>
+      </div>
+    </div>
+
+    <div class="gal-panel" id="g-cafe">
+      <div class="gal-grid">
+        <div class="gi reveal"    onclick="openLb(cafeImgs,0)"><img src="https://i.ibb.co/dshTCT4Y/c1.png" loading="lazy" alt="Coffee Shop"/><div class="gi-ov"><span class="gi-lbl" data-i18n="gal.l.cafe1">Coffee Shop</span></div></div>
+        <div class="gi reveal d1" onclick="openLb(cafeImgs,1)"><img src="https://i.ibb.co/nNdtCDNP/c2.png" loading="lazy" alt="Café Seating"/><div class="gi-ov"><span class="gi-lbl" data-i18n="gal.l.cafe2">Café Seating</span></div></div>
+        <div class="gi reveal d2" onclick="openLb(cafeImgs,2)"><img src="https://i.ibb.co/Tx13Z3xh/c3.png" loading="lazy" alt="Café Interior"/><div class="gi-ov"><span class="gi-lbl" data-i18n="gal.l.cafe3">Café Interior</span></div></div>
+        <div class="gi reveal d3" onclick="openLb(cafeImgs,3)"><img src="https://i.ibb.co/LzjK7Kmd/c4.png" loading="lazy" alt="Café Ambiance"/><div class="gi-ov"><span class="gi-lbl" data-i18n="gal.l.cafe4">Café Ambiance</span></div></div>
+      </div>
+    </div>
+
+    <div class="gal-panel" id="g-rooms">
+      <div class="gal-grid">
+        <div class="gi reveal"    onclick="openLb(groomImgs,0)"><img src="https://i.ibb.co/TMZzNbFD/rr1.png"  loading="lazy" alt="Large Double Room"/><div class="gi-ov"><span class="gi-lbl" data-i18n="gal.l.r1">Large Double Room</span></div></div>
+        <div class="gi reveal d1" onclick="openLb(groomImgs,1)"><img src="https://i.ibb.co/5z0b2s9/v1.png"   loading="lazy" alt="Romeo &amp; Juliette Suite"/><div class="gi-ov"><span class="gi-lbl" data-i18n="gal.l.r2">Romeo &amp; Juliette Suite</span></div></div>
+        <div class="gi reveal d2" onclick="openLb(groomImgs,2)"><img src="https://i.ibb.co/nMLxkbzY/r1.png"  loading="lazy" alt="Deluxe Junior Suite"/><div class="gi-ov"><span class="gi-lbl" data-i18n="gal.l.r3">Deluxe Junior Suite</span></div></div>
+        <div class="gi reveal d3" onclick="openLb(groomImgs,3)"><img src="https://i.ibb.co/0jfCXtzC/e1.png"  loading="lazy" alt="Deluxe Triple Room"/><div class="gi-ov"><span class="gi-lbl" data-i18n="gal.l.r4">Deluxe Triple Room</span></div></div>
+        <div class="gi reveal"    onclick="openLb(groomImgs,4)"><img src="https://i.ibb.co/bgDQyzYg/w2.png"  loading="lazy" alt="VIP Suite with Sauna"/><div class="gi-ov"><span class="gi-lbl" data-i18n="gal.l.r5">VIP Suite with Sauna</span></div></div>
+        <div class="gi reveal d1" onclick="openLb(groomImgs,5)"><img src="https://i.ibb.co/DD2R2dM2/v2.png"  loading="lazy" alt="Suite Interior"/><div class="gi-ov"><span class="gi-lbl" data-i18n="gal.l.r6">Suite Interior</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb">
+  <div class="lb-img-wrap">
+    <button class="lb-close" onclick="closeLb()">&#x2715;</button>
+    <img id="lbImg" src="" alt="Gallery image"/>
+  </div>
+  <div class="lb-nav">
+    <button class="lb-nav-btn" onclick="lbNav(-1)" data-i18n="lb.prev">&#8249; Prev</button>
+    <button class="lb-nav-btn" onclick="lbNav(1)"  data-i18n="lb.next">Next &#8250;</button>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<section id="testimonial">
+  <div class="container" style="max-width:800px">
+    <div class="tq-slider" id="tqSlider"></div>
+    <div class="tq-dots"   id="tqDots"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-sub" data-i18n="con.sub">Get in Touch</p>
+      <h2 class="section-title" data-i18n-h="con.title">Contact <span>Information</span></h2>
+      <span class="gold-line"></span>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-items">
+        <div class="ci reveal">
+          <div class="ci-icon">📍</div>
+          <div><div class="ci-lbl" data-i18n="con.addrlbl">Address</div><div class="ci-val" data-i18n="con.addrval">Nablus Municipal Complex, 7th Floor, Nablus, Palestine</div></div>
+        </div>
+        <div class="ci reveal d1">
+          <div class="ci-icon">📞</div>
+          <div><div class="ci-lbl" data-i18n="con.phonelbl">Phone / WhatsApp</div><div class="ci-val"><a href="tel:+972522956223">+972 52-295-6223</a></div></div>
+        </div>
+        <div class="ci reveal d2">
+          <div class="ci-icon">☎️</div>
+          <div><div class="ci-lbl" data-i18n="con.phone2lbl">Landline</div><div class="ci-val"><a href="tel:+97292373338">09-237-3338</a></div></div>
+        </div>
+        <div class="ci reveal d3">
+          <div class="ci-icon">✉️</div>
+          <div><div class="ci-lbl" data-i18n="con.emaillbl">Email</div><div class="ci-val"><a href="mailto:info@saleemafandihotel.ps">info@saleemafandihotel.ps</a></div></div>
+        </div>
+        <div class="ci reveal">
+          <div class="ci-icon">📘</div>
+          <div><div class="ci-lbl" data-i18n="con.fblbl">Facebook</div><div class="ci-val"><a href="https://www.facebook.com/saleemafandihotel" target="_blank" rel="noopener" data-i18n="con.fbval">Saleem Afandi Hotel</a></div></div>
+        </div>
+        <div class="contact-btns reveal">
+          <a href="tel:+972522956223"                                                                                                          class="cbtn cbtn-call">📞 <span data-i18n="con.btn.call">Call Now</span></a>
+          <a href="https://wa.me/972522956223"            target="_blank" rel="noopener"                                                       class="cbtn cbtn-wa">💬 <span data-i18n="con.btn.wa">WhatsApp</span></a>
+          <a href="mailto:info@saleemafandihotel.ps"                                                                                           class="cbtn cbtn-email">✉️ <span data-i18n="con.btn.email">Email</span></a>
+          <a href="https://www.facebook.com/saleemafandihotel" target="_blank" rel="noopener"                                                  class="cbtn cbtn-fb">📘 <span data-i18n="con.btn.fb">Facebook</span></a>
+          <a href="https://maps.app.goo.gl/A265qWBbx17Wez7bA"            target="_blank" rel="noopener"                                        class="cbtn cbtn-maps">🗺️ <span data-i18n="con.btn.gmaps">Google Maps</span></a>
+          <a href="https://ul.waze.com/ul?place=ChIJl2xkSPTgHBURHDlZ383rLWM&ll=32.22161860%2C35.26147460&navigate=yes" target="_blank" rel="noopener" class="cbtn cbtn-waze">🚗 <span data-i18n="con.btn.waze">Waze</span></a>
+          <a href="https://www.instagram.com/saleem.afandi.hotel"         target="_blank" rel="noopener"                                        class="cbtn cbtn-ig">📸 <span data-i18n="con.btn.ig">Instagram</span></a>
+          <a href="https://www.tiktok.com/@saleem.afandi.hotel"           target="_blank" rel="noopener"                                        class="cbtn cbtn-tik">🎵 <span data-i18n="con.btn.tik">TikTok</span></a>
+        </div>
+      </div>
+
+      <div class="reveal d2">
+        <div class="contact-map-box">
+          <div class="map-iframe-wrap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3394.3!2d35.261474!3d32.221618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151be0f4484c6c97%3A0x632debcddfd93991!2sSaleem%20Afandi%20Hotel!5e0!3m2!1sen!2sps!4v1"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Saleem Afandi Hotel location">
+            </iframe>
+          </div>
+          <div class="map-label">📍 <span data-i18n="con.maplbl">Nablus Municipal Complex, 7th Floor</span></div>
+        </div>
+        <div class="times-box">
+          <div class="time-card">
+            <span class="co-icon">🌅</span>
+            <div>
+              <div class="co-lbl" data-i18n="con.cilbl">Check-in Time</div>
+              <div class="co-val" data-i18n="con.cival">2:00 PM</div>
+            </div>
+          </div>
+          <div class="time-card checkout-card">
+            <span class="co-icon">🌙</span>
+            <div>
+              <div class="co-lbl" data-i18n="con.colbl">Check-out Time</div>
+              <div class="co-val" data-i18n="con.coval">11:30 AM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand" data-i18n-h="footer.brand">Saleem <span>Afandi</span> Hotel</div>
+  <div class="footer-tag" data-i18n="footer.tag">Luxury · Comfort · Elegance — Nablus, Palestine · Est. 2013</div>
+  <div class="footer-links">
+    <a href="#hero"     data-i18n="nav.home">Home</a>
+    <a href="#rooms"    data-i18n="nav.rooms">Rooms</a>
+    <a href="#about"    data-i18n="nav.about">About</a>
+    <a href="#services" data-i18n="nav.services">Services</a>
+    <a href="#gallery"  data-i18n="nav.gallery">Gallery</a>
+    <a href="#contact"  data-i18n="nav.contact">Contact</a>
+  </div>
+  <div class="footer-rule"></div>
+  <p class="footer-owner" data-i18n="footer.owner">
+    Built with care for Saleem Afandi Hotel
+  </p>
+  <p class="footer-copy" data-i18n="footer.copy">© 2013–2025 Saleem Afandi Hotel. All rights reserved. Nablus, Palestine.</p>
+</footer>
+
+<!-- Floating WhatsApp Button -->
+<a id="wa-float" href="https://wa.me/972522956223" target="_blank" rel="noopener" title="WhatsApp us" aria-label="Contact us on WhatsApp">💬</a>
+
+<!-- Back to Top Button -->
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top" aria-label="Scroll back to top">↑</button>
+
+<script src="main.js"></script>
+</body>
+</html>
