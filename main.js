@@ -77,7 +77,7 @@ const T = {
     'footer.brand': 'Saleem <span>Afandi</span> Hotel',
     'footer.tag': 'Luxury · Comfort · Elegance — Nablus, Palestine · Est. 2013',
     'footer.owner': 'Built with care for Saleem Afandi Hotel',
-    'footer.copy': '© 2013–2025 Saleem Afandi Hotel. All rights reserved. Nablus, Palestine.'
+    'footer.copy': '© 2013–2026 Saleem Afandi Hotel. All rights reserved. Nablus, Palestine.'
   },
   ar: {
     'brand.main': 'سليم أفندي', 'brand.sub': 'فندق فاخر',
@@ -150,7 +150,7 @@ const T = {
     'footer.brand': 'فندق <span>سليم أفندي</span>',
     'footer.tag': 'فخامة · راحة · أناقة — نابلس، فلسطين · تأسس 2013',
     'footer.owner': 'صُنع بعناية لفندق سليم أفندي',
-    'footer.copy': '© 2013–2025 فندق سليم أفندي. جميع الحقوق محفوظة. نابلس، فلسطين.'
+    'footer.copy': '© 2013–2026 فندق سليم أفندي. جميع الحقوق محفوظة. نابلس، فلسطين.'
   }
 };
 
